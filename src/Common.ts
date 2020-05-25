@@ -4,25 +4,6 @@ import { Headers } from "node-fetch";
 import { IRequest } from "../types/Request";
 import { IVersion } from "../types/Version";
 
-export async function retrieveRequestFromStdin<T extends any>(): Promise<T> {
-  return new Promise<T>((resolve, reject) => {
-    let inputRaw = "";
-    process.stdin.on("data", (chunk) => inputRaw += chunk);
-    process.stdin.on("end", async () => {
-      try {
-        const json = JSON.parse(inputRaw) as T;
-        if (!json.source.server_url.endsWith("/")) {
-          // Forgive input errors and append missing slash if the user did not honor the docs.
-          json.source.server_url = `${json.source.server_url}/`;
-        }
-        resolve(json);
-      } catch (e) {
-        handleError(e);
-      }
-    });
-  });
-}
-
 export const createFetchHeaders = <R extends IRequest>(request: R): Headers => {
   const headers = new Headers();
   if (request.source.basic_auth_username && request.source.basic_auth_password) {

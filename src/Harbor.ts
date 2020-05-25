@@ -13,7 +13,7 @@ export default class Harbor {
   }
 
   public GetChartMetadata = async (version?: string, labelName?: string): Promise<IChart> => {
-    process.stderr.write("Fetching Latest Chart...\n");
+    process.stderr.write("Fetching Chart...\n");
     try {
       const charts = await this.GetCharts();
       if (isArrayEmpty(charts)) {
