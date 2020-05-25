@@ -1,3 +1,3 @@
-import Harbor from "./src/Harbor";
+import Harbor from ".";
 
 export default Harbor;

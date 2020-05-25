@@ -1,4 +1,4 @@
-interface ILabel {
+export interface ILabel {
   id: number;
   name: string;
   description: string;
@@ -9,3 +9,5 @@ interface ILabel {
   update_time: string;
   deleted: boolean;
 }
+
+export default Label;

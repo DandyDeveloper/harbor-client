@@ -1,8 +1,10 @@
 import fetch, { Headers, Response } from "node-fetch";
-import { IChart } from "../types/Chart";
-import { IRequest } from "../types/Request";
-import { IProject } from "../types/Project";
-import { isArrayEmpty, handleError } from "./Common";
+import { IChart } from "./types/Chart";
+import { IRequest } from "./types/Request";
+import { IProject } from "./types/Project";
+import { ILabel } from "./types/Label";
+import { IImage } from "./types/Image";
+import { isArrayEmpty, handleError } from "./common/Common";
 
 export default class Harbor {
   private readonly params: IRequest;
@@ -205,7 +207,7 @@ export default class Harbor {
   private FindLatestImage(tags: IImage[]): IImage {
     const latestIdx = tags.findIndex((tag) => tag.name === "latest");
     tags.splice(latestIdx, 1);
-    return tags.sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime())[0];
+    return tags.sort((a, b) => new Date(b.creation_time).getTime() - new Date(a.creation_time).getTime())[0];
   }
 
   private FindLatestChart(charts: IChart[]): IChart {
