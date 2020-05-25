@@ -4,7 +4,7 @@ import { IRequest } from "./types/Request";
 import { IProject } from "./types/Project";
 import { ILabel } from "./types/Label";
 import { IImage } from "./types/Image";
-import { isArrayEmpty, handleError } from "./common/Common";
+import { isArrayEmpty, handleError } from "./src/common";
 
 export default class Harbor {
   private readonly params: IRequest;
