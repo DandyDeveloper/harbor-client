@@ -1,10 +1,10 @@
 import fetch, { Headers, Response } from "node-fetch";
-import { IChart } from "./types/Chart";
-import { IRequest } from "./types/Request";
-import { IProject } from "./types/Project";
-import { ILabel } from "./types/Label";
-import { IImage } from "./types/Image";
-import { isArrayEmpty, handleError } from "./src/common";
+import { IChart } from "../types/Chart";
+import { IRequest } from "../types/Request";
+import { IProject } from "../types/Project";
+import { ILabel } from "../types/Label";
+import { IImage } from "../types/Image";
+import { isArrayEmpty, handleError } from "./common";
 
 export default class Harbor {
   private readonly params: IRequest;
