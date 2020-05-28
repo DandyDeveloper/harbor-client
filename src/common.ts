@@ -1,10 +1,7 @@
-#!/usr/bin/env node
-
 import { Headers } from "node-fetch";
-import { IRequest } from "../types/Request";
-import { IVersion } from "../types/Version";
+import { HarborRequest, IVersion } from "./types";
 
-export const createFetchHeaders = <R extends IRequest>(request: R): Headers => {
+export const createFetchHeaders = <R extends HarborRequest>(request: R): Headers => {
   const headers = new Headers();
   if (request.source.basic_auth_username && request.source.basic_auth_password) {
     const basicAuthUsername = request.source.basic_auth_username;

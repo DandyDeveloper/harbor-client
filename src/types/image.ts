@@ -1,4 +1,4 @@
-import { ILabel } from "./Label";
+import { ILabel } from "./label";
 
 export interface IImage {
   id: number;
@@ -12,6 +12,3 @@ export interface IImage {
   creation_time: string;
   update_time: string;
 }
-
-
-export default Image;

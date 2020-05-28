@@ -1,4 +1,4 @@
-interface IImage {
+export interface ITag {
   digest: string;
   name: string;
   size: number;

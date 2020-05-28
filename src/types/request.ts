@@ -1,4 +1,4 @@
-export interface IRequest {
+export interface HarborRequest {
   source: {
     server_url: string;
     version_source: "image" | "chart";
@@ -10,5 +10,3 @@ export interface IRequest {
     basic_auth_password?: string;
   };
 }
-
-export default Request;

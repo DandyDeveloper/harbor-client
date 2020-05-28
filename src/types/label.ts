@@ -9,5 +9,3 @@ export interface ILabel {
   update_time: string;
   deleted: boolean;
 }
-
-export default Label;

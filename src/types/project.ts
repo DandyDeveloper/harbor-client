@@ -10,10 +10,10 @@ export interface IProject {
   current_user_role_id: number;
   repo_count: number;
   chart_count: number;
-  metadata: IMetadata;
+  metadata: IProjectMetadata;
 }
 
-interface IMetadata {
+interface IProjectMetadata {
   auto_scan: string;
   enable_content_trust: string;
   prevent_vul: string;

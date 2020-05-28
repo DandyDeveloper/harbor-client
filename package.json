@@ -1,8 +1,9 @@
 {
   "name": "harbor-client",
-  "version": "1.0.1",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "version": "1.0.2",
+  "description": "Harbor (https://goharbor.io/) Client",
+  "main": "lib/src/index.js",
+  "types": "lib/types/index.d.ts",
   "repository": "git@github.com:DandyDeveloper/harbor-client.git",
   "author": "Aaron Layfield <aaron.layfield@gmail.com>",
   "license": "MIT",
@@ -18,8 +19,5 @@
   "dependencies": {
     "@types/node-fetch": "^2.5.7",
     "node-fetch": "^2.6.0"
-  },
-  "files": [
-    "dist/**/*"
-  ]
+  }
 }
