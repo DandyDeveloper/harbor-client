@@ -1,6 +1,6 @@
 {
   "name": "harbor-client",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Harbor (https://goharbor.io/) Client",
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",

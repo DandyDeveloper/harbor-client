@@ -1,5 +1,3 @@
-/// <reference path="chart.ts" />
-
 export * from "./chart";
 export * from "./image";
 export * from "./label";

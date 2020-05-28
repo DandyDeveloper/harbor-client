@@ -1,5 +1,5 @@
 import { Headers } from "node-fetch";
-import { HarborRequest, IVersion } from "./types";
+import { HarborRequest, IVersion } from ".";
 
 export const createFetchHeaders = <R extends HarborRequest>(request: R): Headers => {
   const headers = new Headers();
